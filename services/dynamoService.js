@@ -10,7 +10,7 @@ AWS.config.update({
 });
 
 const dynamoClient = new AWS.DynamoDB.DocumentClient();
-const TABLE_NAME = "Student_Records"
+const TABLE_NAME = process.env.DYNAMO_TABLE_NAME
 
 // QUERY SECTION
 
