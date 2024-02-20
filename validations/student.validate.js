@@ -4,7 +4,7 @@ const createRecordSchema = {
   body: joi.object().keys({
     firstname: joi.string().required(),
     lastname: joi.string().required(),
-    email: joi.string().email().required().messages({"string.email":"This field is compulsory"}),
+    email: joi.string().email().required().messages({"string.email":"Email is required or invalid email entered"}),
     subject: joi.string(),
     grade: joi.string().valid('A','B','C','D').messages({'any.only':"Invalid Grade Score Entered - Only [A, B, C, D] are allowed"})
   }),
